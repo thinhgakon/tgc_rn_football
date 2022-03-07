@@ -1,4 +1,9 @@
 module.exports = {
   root: true,
-  extends: '@react-native-community',
+  parser: 'babel-eslint',
+  'rules': {
+    'semi': ['warn', 'always'],
+    // 'quotes': ['off', 'single']
+  }
+  // extends: '@react-native-community',
 };
