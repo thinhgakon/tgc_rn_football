@@ -13,7 +13,8 @@ const Tabs = () => {
             screenOptions={{
                 tabBarStyle: {
                     backgroundColor: Colors.tabBackground
-                }
+                },
+                headerShown: false
             }}
         >
             <Tab.Screen
