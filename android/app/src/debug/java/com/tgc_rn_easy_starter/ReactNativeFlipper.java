@@ -4,7 +4,7 @@
  * <p>This source code is licensed under the MIT license found in the LICENSE file in the root
  * directory of this source tree.
  */
-package com.tgc_rn_easy_starter;
+package com.tgc_rn_football;
 
 import android.content.Context;
 import com.facebook.flipper.android.AndroidFlipperClient;

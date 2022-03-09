@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.tgc_rn_easy_starter">
+  package="com.tgc_rn_football">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

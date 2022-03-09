@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.tgc_rn_easy_starter",
+    package = "com.tgc_rn_football",
 )
 
 android_resource(
     name = "res",
-    package = "com.tgc_rn_easy_starter",
+    package = "com.tgc_rn_football",
     res = "src/main/res",
 )
 

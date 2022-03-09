@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "tgc_rn_easy_starter.app"
-               BlueprintName = "tgc_rn_easy_starter"
-               ReferencedContainer = "container:tgc_rn_easy_starter.xcodeproj">
+               BuildableName = "tgc_rn_football.app"
+               BlueprintName = "tgc_rn_football"
+               ReferencedContainer = "container:tgc_rn_football.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "tgc_rn_easy_starterTests.xctest"
-               BlueprintName = "tgc_rn_easy_starterTests"
-               ReferencedContainer = "container:tgc_rn_easy_starter.xcodeproj">
+               BuildableName = "tgc_rn_footballTests.xctest"
+               BlueprintName = "tgc_rn_footballTests"
+               ReferencedContainer = "container:tgc_rn_football.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "tgc_rn_easy_starter.app"
-            BlueprintName = "tgc_rn_easy_starter"
-            ReferencedContainer = "container:tgc_rn_easy_starter.xcodeproj">
+            BuildableName = "tgc_rn_football.app"
+            BlueprintName = "tgc_rn_football"
+            ReferencedContainer = "container:tgc_rn_football.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "tgc_rn_easy_starter.app"
-            BlueprintName = "tgc_rn_easy_starter"
-            ReferencedContainer = "container:tgc_rn_easy_starter.xcodeproj">
+            BuildableName = "tgc_rn_football.app"
+            BlueprintName = "tgc_rn_football"
+            ReferencedContainer = "container:tgc_rn_football.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -33,7 +33,7 @@ static void InitializeFlipper(UIApplication *application) {
 
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                   moduleName:@"tgc_rn_easy_starter"
+                                                   moduleName:@"tgc_rn_football"
                                             initialProperties:nil];
 
   if (@available(iOS 13.0, *)) {

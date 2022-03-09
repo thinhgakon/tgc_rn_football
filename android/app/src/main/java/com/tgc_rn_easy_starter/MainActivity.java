@@ -1,4 +1,4 @@
-package com.tgc_rn_easy_starter;
+package com.tgc_rn_football;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "tgc_rn_easy_starter";
+    return "tgc_rn_football";
   }
 }
