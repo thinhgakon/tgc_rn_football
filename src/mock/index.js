@@ -6,27 +6,27 @@ export const Teams = [
     {
         id: '001',
         name: 'Real Madrid',
-        logo: require('Assets/images/Team1.png'),
+        logo: require('./../../assets/images/Team1.png'),
     },
     {
         id: '002',
         name: 'Arsenal',
-        logo: require('Assets/images/Team2.png'),
+        logo: require('./../../assets/images/Team2.png'),
     },
     {
         id: '003',
         name: 'FC Barcelona',
-        logo: require('Assets/images/Team3.png'),
+        logo: require('./../../assets/images/Team3.png'),
     },
     {
         id: '004',
         name: 'Juventus',
-        logo: require('Assets/images/Team4.png'),
+        logo: require('./../../assets/images/Team4.png'),
     },
     {
         id: '005',
         name: 'Manchester United',
-        logo: require('Assets/images/Team5.png'),
+        logo: require('./../../assets/images/Team5.png'),
     },
 ];
 
@@ -67,19 +67,19 @@ export const Authors = [
     {
         id: '001',
         name: 'Brian Imanuel',
-        avatar: require('Assets/images/Avatar1.png'),
+        avatar: require('./../../assets/images/Avatar1.png'),
     },
     {
         id: '002',
         name: 'Daniel Feliciano',
-        avatar: require('Assets/images/Team5.png'),
+        avatar: require('./../../assets/images/Team5.png'),
     }
 ];
 
 export const News = [
     {
         id: '001',
-        thumbnail: require('Assets/images/News1.png'),
+        thumbnail: require('./../../assets/images/News1.png'),
         title: 'Ronaldo pushing for Man City move',
         type: 'LIVE Transfer Talk',
         author: Authors[0],
@@ -93,8 +93,8 @@ export const News = [
     },
     {
         id: '002',
-        thumbnail: require('Assets/images/News3.png'),
-        title: `"CR7 is back!" - Delighted Manchester United fans react as Cristiano Ronaldo reclaims famous number 7`,
+        thumbnail: require('./../../assets/images/News3.png'),
+        title: `"CR7 is back!" - famous number 7`,
         type: '',
         author: Authors[1],
         views: '1223',
