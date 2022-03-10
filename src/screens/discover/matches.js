@@ -6,7 +6,7 @@ import {
     FlatList,
     StyleSheet
 } from 'react-native';
-import {Icons, Colors} from '../../constants';
+import {Icons, Colors, Fonts} from '../../constants';
 import dummyData from '../../mock';
 
 const renderMatches = ({item, index}) => {
@@ -27,11 +27,12 @@ const renderMatches = ({item, index}) => {
                 backgroundColor: Colors.white,
                 borderRadius: 30,
                 paddingHorizontal: 5,
-                paddingVertical: 10,
+                paddingVertical: 5,
             }}>
                 <Text style={{
                     fontSize: 9,
                     color: '#2648D1',
+                    fontFamily: Fonts.poppinsBold,
                 }}>{item.name}</Text>
             </View>
 
@@ -42,19 +43,19 @@ const renderMatches = ({item, index}) => {
                 justifyContent: 'space-between',
                 marginLeft: 11,
             }}>
-                <Image style={{width: 40}} source={item.team1.logo} />
-                <Image style={{width: 40}} source={item.team2.logo} />
+                <Image style={{width: 40, height: 53}} source={item.team1.logo} />
+                <Image style={{width: 40, height: 53}} source={item.team2.logo} />
             </View>
             <View style={{
                 alignItems: 'center'
             }}>
-                <Text style={{marginTop: 9, fontSize: 10, color: Colors.white}}>
+                <Text style={{marginTop: 9, fontSize: 10, color: Colors.white,fontFamily: Fonts.poppinsBold,}}>
                     {item.team1.name}
                 </Text>
-                <Text style={{fontSize: 6, color: Colors.white}}>
+                <Text style={{fontSize: 6, color: Colors.white,fontFamily: Fonts.poppinsRegular,}}>
                     vs
                 </Text>
-                <Text style={{fontSize: 10, color: Colors.white}}>
+                <Text style={{fontSize: 10, color: Colors.white,fontFamily: Fonts.poppinsBold,}}>
                     {item.team2.name}
                 </Text>
             </View>
@@ -76,6 +77,7 @@ const DiscoverMatches = () => {
                 <Text style={{
                     color: Colors.white,
                     fontSize: 18,
+                    fontFamily: Fonts.poppinsSemiBold,
                 }}>
                     Upcoming Matches
                 </Text>
@@ -83,7 +85,8 @@ const DiscoverMatches = () => {
                     color: Colors.white,
                     fontSize: 9,
                     color: '#A0A3BD',
-                    textTransform: 'uppercase'
+                    textTransform: 'uppercase',
+                    fontFamily: Fonts.poppinsSemiBold,
                 }}>
                     View all
                 </Text>

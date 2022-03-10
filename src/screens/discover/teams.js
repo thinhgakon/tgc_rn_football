@@ -6,7 +6,7 @@ import {
     FlatList,
     StyleSheet
 } from 'react-native';
-import {Icons, Colors} from '../../constants';
+import {Icons, Colors, Fonts} from '../../constants';
 import dummyData from './../../mock';
 
 const renderTeams = ({item, index}) => {
@@ -43,6 +43,7 @@ const DiscoverTeams = () => {
                 <Text style={{
                     color: Colors.white,
                     fontSize: 18,
+                    fontFamily: Fonts.poppinsSemiBold,
                 }}>
                     Popular Teams
                 </Text>
@@ -50,7 +51,8 @@ const DiscoverTeams = () => {
                     color: Colors.white,
                     fontSize: 9,
                     color: '#A0A3BD',
-                    textTransform: 'uppercase'
+                    textTransform: 'uppercase',
+                    fontFamily: Fonts.poppinsSemiBold,
                 }}>
                     View all
                 </Text>

@@ -5,7 +5,7 @@ import {
     Image,
     StyleSheet
 } from 'react-native';
-import {Icons, Colors, Images} from '../../constants';
+import {Icons, Colors, Images, Fonts} from '../../constants';
 import LinearGradient from 'react-native-linear-gradient';
 
 const DiscoverBanner = () => {
@@ -50,7 +50,7 @@ const DiscoverBanner = () => {
                         <Text
                             color="#181829"
                             style={{
-                                fontFamily: 'Inter-SemiBold',
+                                fontFamily: Fonts.interSemiBold,
                                 fontSize: 12,
                             }}
                         >
@@ -59,7 +59,7 @@ const DiscoverBanner = () => {
                     </View>
                     <Text
                         size={17} style={{
-                            fontFamily: 'Inter-SemiBold',
+                            fontFamily: Fonts.interSemiBold,
                             fontSize: 17,
                             color: Colors.white
                         }}
@@ -68,7 +68,7 @@ const DiscoverBanner = () => {
                     </Text>
                     <Text
                         style={{
-                            fontFamily: 'Inter-Regular',
+                            fontFamily: Fonts.interRegular,
                             fontSize: 12,
                             color: Colors.white,
                         }}

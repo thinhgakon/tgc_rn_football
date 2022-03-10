@@ -5,7 +5,7 @@ import {
     Image,
     StyleSheet
 } from 'react-native';
-import {Icons, Colors} from './../../constants';
+import {Fonts, Icons, Colors} from './../../constants';
 
 const DiscoverHeader = () => {
 
@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
         lineHeight: 35,
         fontSize: 30,
         color: Colors.white,
+        fontFamily: Fonts.poppinsSemiBold,
     },
     headerIcon: {
         flexDirection: 'row',
