@@ -8,11 +8,11 @@ import {
     ScrollView,
     TouchableOpacity,
 } from 'react-native';
-import { Colors, Images, Icons } from './../../constants';
+import {Colors, Images, Icons, Fonts} from './../../constants';
 
-const DiscoverDetail = ({ navigation, route }) => {
+const DiscoverDetail = ({navigation, route}) => {
 
-    let { selectedArticle } = route.params;
+    let {selectedArticle} = route.params;
 
     return (
         <View style={styles.container}>
@@ -38,10 +38,10 @@ const DiscoverDetail = ({ navigation, route }) => {
                     onPress={() => {
                         navigation.goBack();
                     }}
-                    >
+                >
                     <Image source={Icons.Back} />
                 </TouchableOpacity>
-                
+
                 <View style={{
                     width: 52,
                     height: 52,
@@ -61,8 +61,8 @@ const DiscoverDetail = ({ navigation, route }) => {
                 <Text style={{
                     color: Colors.white,
                     fontSize: 18,
+                    fontFamily: Fonts.poppinsBold,
                 }}>
-                    {/* {selectedArticle.title} */}
                     {selectedArticle?.type}
                     {selectedArticle?.type ? ' : ' : ''}
                     {selectedArticle?.title}
@@ -80,21 +80,39 @@ const DiscoverDetail = ({ navigation, route }) => {
                     flexDirection: 'row',
                 }}>
                     <Image source={selectedArticle.author.avatar} />
-                    <View style={{ marginLeft: 14 }}>
-                        <Text style={{ color: Colors.white, fontSize: 16, marginBottom: 3 }}>
+                    <View style={{marginLeft: 14}}>
+                        <Text style={{
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontFamily: Fonts.poppinsSemiBold,
+                            marginBottom: 3
+                        }}>
                             {selectedArticle.author.name}
                         </Text>
-                        <Text style={{ color: '#C4C4C4', fontSize: 12 }}>May 15, 2020 </Text>
+                        <Text style={{
+                            color: '#C4C4C4', fontSize: 12,
+                            fontFamily: Fonts.interRegular,
+                        }}>May 15, 2020 </Text>
                     </View>
                 </View>
-                <View style={{ flexDirection: 'row' }}>
+                <View style={{flexDirection: 'row'}}>
                     <Image source={Icons.Likes} />
-                    <Text style={{ color: Colors.white, fontSize: 12, marginLeft: 8, marginRight: 15 }}>
+                    <Text style={{
+                        color: Colors.white,
+                        fontSize: 12, marginLeft: 8,
+                        marginRight: 15,
+                        fontFamily: Fonts.interRegular,
+                    }}>
                         {selectedArticle.likes}
                     </Text>
                     <Image source={Icons.Comments} />
-                    <Text style={{ color: Colors.white, fontSize: 12, marginLeft: 8 }}>
-                        {selectedArticle.comments}    
+                    <Text style={{
+                        color: Colors.white,
+                        fontSize: 12,
+                        marginLeft: 8,
+                        fontFamily: Fonts.interRegular,
+                    }}>
+                        {selectedArticle.comments}
                     </Text>
                 </View>
             </View>
@@ -104,9 +122,14 @@ const DiscoverDetail = ({ navigation, route }) => {
                 marginHorizontal: 16,
             }}>
                 <View>
-                    <View style={{ marginHorizontal: 16, marginTop: 15 }}>
-                        <Text style={{ color: '#EAEBFF' }}>
-                        {selectedArticle.detail}
+                    <View style={{marginHorizontal: 16, marginTop: 15}}>
+                        <Text style={{
+                            color: '#EAEBFF',
+                            fontFamily: Fonts.interRegular,
+                            fontSize: 14
+
+                        }}>
+                            {selectedArticle.detail}
                         </Text>
                     </View>
                 </View>
@@ -127,8 +150,8 @@ const DiscoverDetail = ({ navigation, route }) => {
                 <View style={{
                     flexDirection: 'row',
                 }}>
-                    <Text style={{ fontSize: 18, color: Colors.white, marginRight: 8 }}>Read More</Text>
-                    <Image style={{ width: 24, height: 24 }} source={Icons.Down} />
+                    <Text style={{fontSize: 18, color: Colors.white, marginRight: 8}}>Read More</Text>
+                    <Image style={{width: 24, height: 24}} source={Icons.Down} />
                 </View>
             </View>
         </View>
