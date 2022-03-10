@@ -6,10 +6,13 @@ import {
     ImageBackground,
     StyleSheet,
     ScrollView,
+    TouchableOpacity,
 } from 'react-native';
 import { Colors, Images, Icons } from './../../constants';
 
-const DiscoverDetail = () => {
+const DiscoverDetail = ({ navigation, route }) => {
+
+    let { selectedArticle } = route.params;
 
     return (
         <View style={styles.container}>
@@ -20,7 +23,7 @@ const DiscoverDetail = () => {
                 top: 0,
             }}
                 resizeMode='cover'
-                source={Images.News1}
+                source={selectedArticle.thumbnail}
             />
 
             <View style={{
@@ -31,7 +34,14 @@ const DiscoverDetail = () => {
                 marginHorizontal: 16,
                 marginTop: 44
             }}>
-                <Image source={Icons.Back} />
+                <TouchableOpacity
+                    onPress={() => {
+                        navigation.goBack();
+                    }}
+                    >
+                    <Image source={Icons.Back} />
+                </TouchableOpacity>
+                
                 <View style={{
                     width: 52,
                     height: 52,
@@ -51,7 +61,12 @@ const DiscoverDetail = () => {
                 <Text style={{
                     color: Colors.white,
                     fontSize: 18,
-                }}>LIVE Transfer Talk: Ronaldo pushing for Man City move</Text>
+                }}>
+                    {/* {selectedArticle.title} */}
+                    {selectedArticle?.type}
+                    {selectedArticle?.type ? ' : ' : ''}
+                    {selectedArticle?.title}
+                </Text>
             </View>
 
             <View style={{
@@ -64,17 +79,23 @@ const DiscoverDetail = () => {
                 <View style={{
                     flexDirection: 'row',
                 }}>
-                    <Image source={Images.Avatar1} />
+                    <Image source={selectedArticle.author.avatar} />
                     <View style={{ marginLeft: 14 }}>
-                        <Text style={{ color: Colors.white, fontSize: 16, marginBottom: 3 }}>Brian Imanuel</Text>
+                        <Text style={{ color: Colors.white, fontSize: 16, marginBottom: 3 }}>
+                            {selectedArticle.author.name}
+                        </Text>
                         <Text style={{ color: '#C4C4C4', fontSize: 12 }}>May 15, 2020 </Text>
                     </View>
                 </View>
                 <View style={{ flexDirection: 'row' }}>
                     <Image source={Icons.Likes} />
-                    <Text style={{ color: Colors.white, fontSize: 12, marginLeft: 8, marginRight: 15 }}>1403</Text>
+                    <Text style={{ color: Colors.white, fontSize: 12, marginLeft: 8, marginRight: 15 }}>
+                        {selectedArticle.likes}
+                    </Text>
                     <Image source={Icons.Comments} />
-                    <Text style={{ color: Colors.white, fontSize: 12, marginLeft: 8 }}>976</Text>
+                    <Text style={{ color: Colors.white, fontSize: 12, marginLeft: 8 }}>
+                        {selectedArticle.comments}    
+                    </Text>
                 </View>
             </View>
 
@@ -85,13 +106,7 @@ const DiscoverDetail = () => {
                 <View>
                     <View style={{ marginHorizontal: 16, marginTop: 15 }}>
                         <Text style={{ color: '#EAEBFF' }}>
-                            Cristiano Ronaldo has left Juventus' training session early on Wednesday morning after sustaining a blow to the arm.
-                        </Text>
-                        <Text style={{ color: '#EAEBFF' }}>
-                            After reportedly asking not to start for last Saturday's 2-2 draw at Udinese, could this mean he is ruled out for Saturday's home match against Empoli
-                        </Text>
-                        <Text style={{ color: '#EAEBFF' }}>
-                            After reportedly asking not to start for last Saturday's 2-2 draw at Udinese, could this mean he is ruled out for Saturday's home match against Empoli
+                        {selectedArticle.detail}
                         </Text>
                     </View>
                 </View>

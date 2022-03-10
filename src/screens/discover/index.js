@@ -14,7 +14,7 @@ import DiscoverTeams from './teams';
 import DiscoverMatches from './matches';
 import DiscoverNews from './news';
 
-const Discover = () => {
+const Discover = ({navigation}) => {
 
     return (
         <View style={styles.container}>
@@ -29,7 +29,7 @@ const Discover = () => {
 
                 <DiscoverMatches />
 
-                <DiscoverNews />
+                <DiscoverNews navigation={navigation} />
             </ScrollView>
         </View>
     );

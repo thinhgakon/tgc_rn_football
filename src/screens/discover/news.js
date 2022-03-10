@@ -4,42 +4,51 @@ import {
     View,
     Image,
     FlatList,
-    StyleSheet
+    StyleSheet,
+    TouchableOpacity
 } from 'react-native';
 import {Icons, Colors} from '../../constants';
 import dummyData from '../../mock';
 
-const renderNews = ({item, index}) => {
-    return (
-        <View style={{
-            width: 319,
-            height: 93,
-            marginLeft: index === 0 ? 16 : 0,
-            marginRight: index === dummyData.Teams.length - 1 ? 0 : 10,
-            flexDirection: 'row'
-        }}>
-            <Image style={{
-                width: 120,
-                height: 93,
-                borderRadius: 10,
-                marginRight: 10
-            }} source={item.thumbnail} />
-            <View style={{
-                width: 189
-            }}>
-                <Text style={{fontSize: 14, color: Colors.white, marginBottom: 10}}>{item.title}</Text>
-                <Text style={{fontSize: 11, color: '#808191', marginBottom: 10}} >
-                    {item.views} views - 2 days ago
-                </Text>
-                <Text style={{fontSize: 12, color: '#808191'}}>
-                    {item.author.name}
-                </Text>
-            </View>
-        </View >
-    );
-};
 
-const DiscoverNews = () => {
+
+const DiscoverNews = ({ navigation }) => {
+
+    const renderNews = ({item, index}) => {
+        return (
+            <TouchableOpacity
+                onPress={
+                    () => {
+                    navigation.navigate('DiscoverDetail', { selectedArticle: item });
+                    }
+                }
+                style={{
+                    width: 319,
+                    height: 93,
+                    marginLeft: index === 0 ? 16 : 0,
+                    marginRight: index === dummyData.Teams.length - 1 ? 0 : 10,
+                    flexDirection: 'row'
+                }}>
+                    <Image style={{
+                        width: 120,
+                        height: 93,
+                        borderRadius: 10,
+                        marginRight: 10
+                    }} source={item.thumbnail} />
+                    <View style={{
+                        width: 189
+                    }}>
+                        <Text style={{fontSize: 14, color: Colors.white, marginBottom: 10}}>{item.title}</Text>
+                        <Text style={{fontSize: 11, color: '#808191', marginBottom: 10}} >
+                            {item.views} views - 2 days ago
+                        </Text>
+                        <Text style={{fontSize: 12, color: '#808191'}}>
+                            {item.author.name}
+                        </Text>
+                    </View>
+            </TouchableOpacity >
+        );
+    };
 
     return (
         <View style={styles.news}>

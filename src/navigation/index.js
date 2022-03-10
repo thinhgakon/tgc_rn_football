@@ -11,13 +11,13 @@ const AppNavigation = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                {/* <Stack.Screen
+                <Stack.Screen
                     name="Tabs"
                     component={Tabs}
                     options={{
                         headerShown: false,
                     }}
-                /> */}
+                />
                 <Stack.Screen
                     name="DiscoverDetail"
                     component={DiscoverDetail}
