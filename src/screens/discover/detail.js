@@ -62,6 +62,7 @@ const DiscoverDetail = ({navigation, route}) => {
                     color: Colors.white,
                     fontSize: 18,
                     fontFamily: Fonts.poppinsBold,
+                    lineHeight: 27
                 }}>
                     {selectedArticle?.type}
                     {selectedArticle?.type ? ' : ' : ''}
@@ -126,8 +127,8 @@ const DiscoverDetail = ({navigation, route}) => {
                         <Text style={{
                             color: '#EAEBFF',
                             fontFamily: Fonts.interRegular,
-                            fontSize: 14
-
+                            fontSize: 14,
+                            lineHeight: 26
                         }}>
                             {selectedArticle.detail}
                         </Text>
